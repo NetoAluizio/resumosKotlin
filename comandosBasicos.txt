@@ -1,0 +1,110 @@
+Kotlin: Resumo informações básicas:
+
+# Tipos de dados:
+	Int
+	Long
+	Float
+	Double
+	Array
+	Boolean
+	Char
+	Byte
+	Short
+	Null
+	etc...
+
+# Valor máximo do dado:
+	println(dado.MAX_VALUE)
+	Ex.: println(Int.MAX_VALUE)
+
+# Conversão de dados:
+	toDado()
+	Ex.: 2022.toString()
+
+# Variáveis:
+	Var - mutável (CamelCase)
+		Ex.: var currentAge = 22 (recebe valores iguais ao declarado)
+		     var currantAge:Int? (recebe inteiro ou null)
+	Val - imutável (CamelCase)
+		Ex.: var currentAge = 22 (recebe valores iguais ao declarado)
+		     var currantAge:Int? (recebe inteiro ou null)
+	Const Val - imutável (SNAKE_CASE)
+		Ex.: const val MIN_AGE = 18
+		     const VAL MAX_AGE = 48
+
+# Operadores Aritméticos:
+	soma(a + b): a.plus(b) ou a+=b
+	subtração(a - b): a.minus(b) ou a-=b
+	multiplicação(a * b): a.times(b) ou a*=b
+	divisão(a / b): a.div(b) ou a/=b
+	resto(a % b): a.mod(b) ou a%=b
+
+# Operadores Comparativos:
+	maior/menor: a > b ou a < b 
+		a.compareTo(b) > 0 ou a.compareTo(b) < 0
+	maior/menor igual: a >= b ou a <= b
+		a.compareTo(b) >= 0 ou a.compareTo(b) <= 0
+	igual: a == b
+		a.equals(b)
+	diferente: a != b
+		!(a.equals(b))
+
+	Observação:
+		Operadores e Equals retornam booleano;
+		CompareTo retorna -1(menos), 0(igual) ou 1(maior).
+
+# Operadores Lógicos:
+	E: (&&)
+		(expressão1) and (expressão2)
+	Ou: (||)
+		(expressão1) or (expressão2)
+	contém: (In)
+	não contém: (!In)
+	range/faixa de valores: (Int..Int)
+	Observação: 
+		criar faixa de valores: ..
+		valor aleatório: .random()
+	Exemplo:
+		const val MIN_AGE = 16
+		const val MAX_AGE = 68
+		fun main() {
+    		var age = (10..100).random()
+   		println(age)
+    		println(age in MIN_AGE..MAX_AGE)
+    		println((age >= MIN_AGE) && (age <= MAX_AGE))
+
+# Strings:
+	string = array
+	.first(): primeira posição
+	.last(): última posição
+	.lenght: comprimento
+	string[index]: local em específico
+	plus/+: concatenar
+	$variável: concatenar string com variável
+	
+
+# Formatação:
+	.capitalize(): primeira letra maiúscula
+	.decapitalize(): primeira letra minúscula
+	.toUpperCase(): tudo em CAPS LOCK
+	.toLowerCase(): tudo em minúscula
+	.trimEnd():
+	.trimStart():
+	.trim():
+	.replace(x,y): substituir caracteres
+	"padrão${valor}".format(valor): formatar/padronizar valores
+	
+# Vazio x em branco:
+	Empty: Vazio
+	Blank: Em branco
+	variável.isEmpty(): está vazia?
+	variável.isBlank(): está em branco?
+	variável.isNullOrBlank: está nulo ou em branco?
+	variável.isNullOrEmpty: está nulo ou vazio?
+
+Funções:
+
+# Estrutura:
+	Prefixo fun nomeDaFunção(nome:Tipo):TipoRetorno{return}
+	ou
+	Prefixo fun nomeDaFunção(nome:Tipo) = return
